@@ -51,18 +51,10 @@
             txtEstadoSigla = new TextBox();
             txtCidade = new TextBox();
             cbTurno = new ComboBox();
+            label6 = new Label();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbProfessor).BeginInit();
             SuspendLayout();
@@ -201,7 +193,7 @@
             mtxtTelCelular.Location = new Point(60, 361);
             mtxtTelCelular.Mask = "(00) 00000-0000";
             mtxtTelCelular.Name = "mtxtTelCelular";
-            mtxtTelCelular.Size = new Size(134, 29);
+            mtxtTelCelular.Size = new Size(145, 29);
             mtxtTelCelular.TabIndex = 45;
             // 
             // mtxtTelResidencia
@@ -210,7 +202,7 @@
             mtxtTelResidencia.Location = new Point(60, 414);
             mtxtTelResidencia.Mask = "(00) 00000-0000";
             mtxtTelResidencia.Name = "mtxtTelResidencia";
-            mtxtTelResidencia.Size = new Size(134, 29);
+            mtxtTelResidencia.Size = new Size(145, 29);
             mtxtTelResidencia.TabIndex = 46;
             // 
             // txtEmail
@@ -220,7 +212,7 @@
             txtEmail.Location = new Point(230, 363);
             txtEmail.Multiline = true;
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(184, 27);
+            txtEmail.Size = new Size(193, 27);
             txtEmail.TabIndex = 47;
             // 
             // mtxtCEP
@@ -271,10 +263,10 @@
             // 
             txtNumeroCasa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroCasa.ForeColor = Color.Black;
-            txtNumeroCasa.Location = new Point(336, 223);
+            txtNumeroCasa.Location = new Point(336, 222);
             txtNumeroCasa.Multiline = true;
             txtNumeroCasa.Name = "txtNumeroCasa";
-            txtNumeroCasa.Size = new Size(56, 28);
+            txtNumeroCasa.Size = new Size(63, 31);
             txtNumeroCasa.TabIndex = 52;
             // 
             // txtComplemento
@@ -284,7 +276,7 @@
             txtComplemento.Location = new Point(338, 280);
             txtComplemento.Multiline = true;
             txtComplemento.Name = "txtComplemento";
-            txtComplemento.Size = new Size(124, 28);
+            txtComplemento.Size = new Size(133, 28);
             txtComplemento.TabIndex = 53;
             // 
             // txtEstadoSigla
@@ -304,7 +296,7 @@
             txtCidade.Location = new Point(481, 166);
             txtCidade.Multiline = true;
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(134, 28);
+            txtCidade.Size = new Size(134, 29);
             txtCidade.TabIndex = 55;
             // 
             // cbTurno
@@ -318,137 +310,53 @@
             cbTurno.Size = new Size(188, 29);
             cbTurno.TabIndex = 56;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.ControlLight;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Red;
+            label6.Location = new Point(618, 97);
+            label6.Name = "label6";
+            label6.Size = new Size(20, 25);
+            label6.TabIndex = 57;
+            label6.Text = "*";
+            // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.ControlLight;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(452, 164);
+            label1.Location = new Point(404, 336);
             label1.Name = "label1";
             label1.Size = new Size(20, 25);
-            label1.TabIndex = 57;
+            label1.TabIndex = 58;
             label1.Text = "*";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.ControlLight;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(394, 220);
+            label2.Location = new Point(286, 96);
             label2.Name = "label2";
             label2.Size = new Size(20, 25);
-            label2.TabIndex = 58;
+            label2.TabIndex = 59;
             label2.Text = "*";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.ControlLight;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Red;
-            label3.Location = new Point(618, 164);
+            label3.Location = new Point(672, 354);
             label3.Name = "label3";
             label3.Size = new Size(20, 25);
-            label3.TabIndex = 59;
+            label3.TabIndex = 60;
             label3.Text = "*";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Red;
-            label4.Location = new Point(463, 280);
-            label4.Name = "label4";
-            label4.Size = new Size(20, 25);
-            label4.TabIndex = 60;
-            label4.Text = "*";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Red;
-            label5.Location = new Point(618, 220);
-            label5.Name = "label5";
-            label5.Size = new Size(20, 25);
-            label5.TabIndex = 61;
-            label5.Text = "*";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Red;
-            label6.Location = new Point(618, 280);
-            label6.Name = "label6";
-            label6.Size = new Size(20, 25);
-            label6.TabIndex = 62;
-            label6.Text = "*";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Red;
-            label7.Location = new Point(671, 354);
-            label7.Name = "label7";
-            label7.Size = new Size(20, 25);
-            label7.TabIndex = 63;
-            label7.Text = "*";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Red;
-            label8.Location = new Point(186, 189);
-            label8.Name = "label8";
-            label8.Size = new Size(20, 25);
-            label8.TabIndex = 64;
-            label8.Text = "*";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Red;
-            label9.Location = new Point(184, 248);
-            label9.Name = "label9";
-            label9.Size = new Size(20, 25);
-            label9.TabIndex = 65;
-            label9.Text = "*";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Red;
-            label10.Location = new Point(195, 361);
-            label10.Name = "label10";
-            label10.Size = new Size(20, 25);
-            label10.TabIndex = 66;
-            label10.Text = "*";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Red;
-            label11.Location = new Point(195, 414);
-            label11.Name = "label11";
-            label11.Size = new Size(20, 25);
-            label11.TabIndex = 67;
-            label11.Text = "*";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.Red;
-            label12.Location = new Point(403, 361);
-            label12.Name = "label12";
-            label12.Size = new Size(22, 30);
-            label12.TabIndex = 68;
-            label12.Text = "*";
             // 
             // TelaProfessor
             // 
@@ -456,18 +364,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(960, 540);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(label6);
             Controls.Add(cbTurno);
             Controls.Add(txtCidade);
             Controls.Add(txtEstadoSigla);
@@ -523,17 +423,9 @@
         private TextBox txtEstadoSigla;
         private TextBox txtCidade;
         private ComboBox cbTurno;
+        private Label label6;
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
-        private Label label12;
     }
 }

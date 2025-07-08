@@ -39,7 +39,7 @@
             cbTurno = new ComboBox();
             txtTurma = new TextBox();
             label1 = new Label();
-            label2 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pbFechar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProfessores).BeginInit();
             SuspendLayout();
@@ -169,16 +169,17 @@
             label1.TabIndex = 40;
             label1.Text = "Português\n\nMatemática\n\nFísica\n\nQuímica\n\nBiologia\n\nHistória\n\nGeografia\n\nInglês\n\nEducação Física\n\nArtes ";
             // 
-            // label2
+            // label6
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Red;
-            label2.Location = new Point(218, 143);
-            label2.Name = "label2";
-            label2.Size = new Size(20, 25);
-            label2.TabIndex = 41;
-            label2.Text = "*";
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.Control;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Red;
+            label6.Location = new Point(223, 143);
+            label6.Name = "label6";
+            label6.Size = new Size(20, 25);
+            label6.TabIndex = 41;
+            label6.Text = "*";
             // 
             // TelaTurma
             // 
@@ -186,7 +187,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(960, 540);
-            Controls.Add(label2);
+            Controls.Add(label6);
             Controls.Add(label1);
             Controls.Add(txtTurma);
             Controls.Add(cbTurno);
@@ -218,6 +219,6 @@
         private ComboBox cbTurno;
         private TextBox txtTurma;
         private Label label1;
-        private Label label2;
+        private Label label6;
     }
 }

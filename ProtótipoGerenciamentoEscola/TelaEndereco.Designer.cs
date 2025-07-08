@@ -194,13 +194,13 @@
             txtNome.Location = new Point(98, 161);
             txtNome.Multiline = true;
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(215, 26);
+            txtNome.Size = new Size(218, 26);
             txtNome.TabIndex = 41;
             // 
             // mtxtTelCelular
             // 
             mtxtTelCelular.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtTelCelular.Location = new Point(168, 253);
+            mtxtTelCelular.Location = new Point(168, 251);
             mtxtTelCelular.Mask = "(00) 00000-0000";
             mtxtTelCelular.Name = "mtxtTelCelular";
             mtxtTelCelular.Size = new Size(119, 29);
@@ -278,7 +278,7 @@
             // 
             txtNumeroCasa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNumeroCasa.ForeColor = Color.Black;
-            txtNumeroCasa.Location = new Point(460, 313);
+            txtNumeroCasa.Location = new Point(459, 314);
             txtNumeroCasa.Multiline = true;
             txtNumeroCasa.Name = "txtNumeroCasa";
             txtNumeroCasa.Size = new Size(99, 28);

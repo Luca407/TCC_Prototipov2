@@ -36,16 +36,10 @@
             mtxtNascimento = new MaskedTextBox();
             mtxtCPF = new MaskedTextBox();
             mtxtSUS = new MaskedTextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             txtMatricula = new TextBox();
             txtDTMatricula = new TextBox();
             txtValMatricula = new TextBox();
             cbTurmas = new ComboBox();
-            label6 = new Label();
             pbFotoAluno = new PictureBox();
             btnCadastro = new Button();
             btnTelaAluno = new Button();
@@ -54,6 +48,8 @@
             btnTurmas = new Button();
             button3 = new Button();
             btnFichaCadastral = new Button();
+            label6 = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pbFechar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbFotoAluno).BeginInit();
             SuspendLayout();
@@ -78,7 +74,7 @@
             txtNome.Location = new Point(180, 118);
             txtNome.Multiline = true;
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(298, 30);
+            txtNome.Size = new Size(304, 30);
             txtNome.TabIndex = 2;
             // 
             // txtNacionalidade
@@ -88,7 +84,7 @@
             txtNacionalidade.Location = new Point(180, 190);
             txtNacionalidade.Multiline = true;
             txtNacionalidade.Name = "txtNacionalidade";
-            txtNacionalidade.Size = new Size(189, 30);
+            txtNacionalidade.Size = new Size(179, 30);
             txtNacionalidade.TabIndex = 4;
             // 
             // checkDeficiencia
@@ -105,10 +101,10 @@
             // 
             mtxtNascimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mtxtNascimento.ForeColor = SystemColors.WindowText;
-            mtxtNascimento.Location = new Point(180, 158);
+            mtxtNascimento.Location = new Point(181, 158);
             mtxtNascimento.Mask = "00/00/0000";
             mtxtNascimento.Name = "mtxtNascimento";
-            mtxtNascimento.Size = new Size(129, 29);
+            mtxtNascimento.Size = new Size(124, 29);
             mtxtNascimento.TabIndex = 8;
             mtxtNascimento.ValidatingType = typeof(DateTime);
             // 
@@ -129,61 +125,6 @@
             mtxtSUS.Name = "mtxtSUS";
             mtxtSUS.Size = new Size(180, 29);
             mtxtSUS.TabIndex = 10;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Red;
-            label1.Location = new Point(372, 190);
-            label1.Name = "label1";
-            label1.Size = new Size(20, 25);
-            label1.TabIndex = 11;
-            label1.Text = "*";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Red;
-            label2.Location = new Point(360, 226);
-            label2.Name = "label2";
-            label2.Size = new Size(20, 25);
-            label2.TabIndex = 12;
-            label2.Text = "*";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Red;
-            label3.Location = new Point(360, 266);
-            label3.Name = "label3";
-            label3.Size = new Size(20, 25);
-            label3.TabIndex = 13;
-            label3.Text = "*";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Red;
-            label4.Location = new Point(310, 158);
-            label4.Name = "label4";
-            label4.Size = new Size(20, 25);
-            label4.TabIndex = 14;
-            label4.Text = "*";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Red;
-            label5.Location = new Point(478, 118);
-            label5.Name = "label5";
-            label5.Size = new Size(20, 25);
-            label5.TabIndex = 15;
-            label5.Text = "*";
             // 
             // txtMatricula
             // 
@@ -226,17 +167,6 @@
             cbTurmas.Name = "cbTurmas";
             cbTurmas.Size = new Size(182, 29);
             cbTurmas.TabIndex = 20;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Red;
-            label6.Location = new Point(687, 181);
-            label6.Name = "label6";
-            label6.Size = new Size(20, 25);
-            label6.TabIndex = 21;
-            label6.Text = "*";
             // 
             // pbFotoAluno
             // 
@@ -359,12 +289,37 @@
             btnFichaCadastral.UseVisualStyleBackColor = false;
             btnFichaCadastral.Click += btnFichaCadastral_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.ControlLight;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Red;
+            label6.Location = new Point(687, 181);
+            label6.Name = "label6";
+            label6.Size = new Size(20, 25);
+            label6.TabIndex = 21;
+            label6.Text = "*";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ControlLight;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(307, 158);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 25);
+            label1.TabIndex = 32;
+            label1.Text = "*";
+            // 
             // TelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(960, 540);
+            Controls.Add(label1);
             Controls.Add(btnFichaCadastral);
             Controls.Add(button3);
             Controls.Add(btnTurmas);
@@ -378,11 +333,6 @@
             Controls.Add(txtValMatricula);
             Controls.Add(txtDTMatricula);
             Controls.Add(txtMatricula);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(mtxtSUS);
             Controls.Add(mtxtCPF);
             Controls.Add(mtxtNascimento);
@@ -408,16 +358,10 @@
         private MaskedTextBox mtxtNascimento;
         private MaskedTextBox mtxtCPF;
         private MaskedTextBox mtxtSUS;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
         private TextBox txtMatricula;
         private TextBox txtDTMatricula;
         private TextBox txtValMatricula;
         private ComboBox cbTurmas;
-        private Label label6;
         private PictureBox pbFotoAluno;
         private Button btnCadastro;
         private Button btnTelaAluno;
@@ -426,5 +370,7 @@
         private Button btnTurmas;
         private Button button3;
         private Button btnFichaCadastral;
+        private Label label6;
+        private Label label1;
     }
 }
