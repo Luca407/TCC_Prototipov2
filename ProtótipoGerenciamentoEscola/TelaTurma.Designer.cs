@@ -130,6 +130,7 @@
             btnTelaProfessor.TabIndex = 34;
             btnTelaProfessor.TabStop = false;
             btnTelaProfessor.UseVisualStyleBackColor = false;
+            btnTelaProfessor.Click += btnTelaProfessor_Click;
             // 
             // dgvProfessores
             // 

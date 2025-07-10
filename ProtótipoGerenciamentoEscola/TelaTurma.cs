@@ -26,7 +26,15 @@ namespace ProtótipoGerenciamentoEscola
         {
             TelaPrincipal telaAluno = new TelaPrincipal();
             telaAluno.ShowDialog();
+            this.Hide();
             // Vai para a tela de ficha cadastral que seria a mesma tela de cadastro de aluno
+        }
+
+        private void btnTelaProfessor_Click(object sender, EventArgs e)
+        {
+            TelaProfessor telaProfessor = new TelaProfessor();
+            telaProfessor.ShowDialog();
+            this.Hide();
         }
     }
 }

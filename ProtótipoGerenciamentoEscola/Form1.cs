@@ -17,6 +17,7 @@ namespace ProtótipoGerenciamentoEscola
         {
             TelaPrincipal telaAluno = new TelaPrincipal();
             telaAluno.ShowDialog();
+            this.Hide();
             // Vai para a tela de cadastro de aluno
         }
 
@@ -24,6 +25,7 @@ namespace ProtótipoGerenciamentoEscola
         {
             TelaResponsavel telaResponsavel = new TelaResponsavel();
             telaResponsavel.ShowDialog();
+
             // Vai para a tela de cadastro de responsável
         }
 
