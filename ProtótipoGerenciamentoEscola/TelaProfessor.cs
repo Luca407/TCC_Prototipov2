@@ -45,7 +45,6 @@ namespace ProtótipoGerenciamentoEscola
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            // Validação nome completo: pelo menos duas palavras
             var nomes = txtNome.Text.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
             if (nomes.Length < 2)
             {
@@ -55,7 +54,6 @@ namespace ProtótipoGerenciamentoEscola
                 return;
             }
 
-            // Valida CPF (11 dígitos)
             if (!ValidarCpf(txtCPF.Text))
             {
                 MessageBox.Show("CPF inválido.", "Erro de CPF",
@@ -64,7 +62,6 @@ namespace ProtótipoGerenciamentoEscola
                 return;
             }
 
-            // Validação de CEP opcional: se preenchido, deve ter 8 dígitos
             var cepNum = Regex.Replace(txtCEP.Text, @"\D", string.Empty);
             if (!string.IsNullOrWhiteSpace(txtCEP.Text) &&
                 !Regex.IsMatch(cepNum, @"^\d{8}$"))
@@ -75,7 +72,6 @@ namespace ProtótipoGerenciamentoEscola
                 return;
             }
 
-            // Validação de telefone: ao menos um
             bool temCel = !string.IsNullOrWhiteSpace(txtTelCelular.Text);
             bool temRes = !string.IsNullOrWhiteSpace(txtTelResidencia.Text);
             if (!temCel && !temRes)
@@ -86,7 +82,6 @@ namespace ProtótipoGerenciamentoEscola
                 return;
             }
 
-            // Validação de e-mail opcional: padrão básico
             if (!string.IsNullOrWhiteSpace(txtEmail.Text) &&
                 !Regex.IsMatch(txtEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
@@ -96,7 +91,6 @@ namespace ProtótipoGerenciamentoEscola
                 return;
             }
 
-            // Persistência
             int idEndereco = SalvarEndereco();
             int idContato = SalvarContato();
 
@@ -143,7 +137,7 @@ namespace ProtótipoGerenciamentoEscola
             var cep = Regex.Replace(cepRaw, @"\D", string.Empty);
 
             if (string.IsNullOrWhiteSpace(cep))
-                return; // CEP opcional
+                return;
 
             if (!Regex.IsMatch(cep, @"^\d{8}$"))
             {
@@ -190,7 +184,8 @@ namespace ProtótipoGerenciamentoEscola
             txtBairro.Clear();
             txtCidade.Clear();
             cbEstado.SelectedIndex = -1;
-            
+            txtNumero.Clear();
+            txtComplemento.Clear();
         }
 
         private class EstadoIbge
@@ -207,7 +202,7 @@ namespace ProtótipoGerenciamentoEscola
 
         private int SalvarEndereco()
         {
-            using var conn = conexao.AbrirConexao();
+            using var conn = conexao.Conectar();
             using var cmd = conn.CreateCommand();
             cmd.CommandText = @"INSERT INTO Endereco (cep, rua, numero, bairro, cidade, estado, complemento)
                                  VALUES (@cep,@rua,@num,@bairro,@cid,@uf,@comp);
@@ -226,7 +221,7 @@ namespace ProtótipoGerenciamentoEscola
 
         private int SalvarContato()
         {
-            using var conn = conexao.AbrirConexao();
+            using var conn = conexao.Conectar();
             using var cmd = conn.CreateCommand();
             cmd.CommandText = @"INSERT INTO Contato (telefone_celular, telefone_residencial, email)
                                  VALUES (@cel,@res,@email);

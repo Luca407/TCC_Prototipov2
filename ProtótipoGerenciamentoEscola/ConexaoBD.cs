@@ -9,39 +9,18 @@ namespace ProtótipoGerenciamentoEscola
 {
     internal class ConexaoBD
     {
-        private string conexaoString = "Server=localhost; Database=teste; Uid=root; Pwd=;";
+        
+            private string conexaoBanco = "Server=localhost; Database=agenda_escolar; Uid=root; Pwd=;";
 
-        private MySqlConnection? conexao = null;
-
-        public MySqlConnection AbrirConexao()
-        {
-            try
+            public MySqlConnection Conectar()
             {
-                if (conexao == null)
-                    conexao = new MySqlConnection(conexaoString);
+                MySqlConnection conexao = new MySqlConnection(conexaoBanco);
 
-                if (conexao.State == System.Data.ConnectionState.Closed)
-                    conexao.Open();
+                conexao.Open();
+                return conexao;
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro ao abrir a conexão com o banco de dados: " + ex.Message);
-            }
+        
 
-            return conexao;
-        }
 
-        public void FecharConexao()
-        {
-            try
-            {
-                if (conexao != null && conexao.State == System.Data.ConnectionState.Open)
-                    conexao.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro ao fechar a conexão com o banco de dados: " + ex.Message);
-            }
-        }
     }
 }
