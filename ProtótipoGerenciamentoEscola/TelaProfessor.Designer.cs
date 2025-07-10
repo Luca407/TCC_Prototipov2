@@ -37,24 +37,23 @@
             btnLimpar = new Button();
             pbProfessor = new PictureBox();
             txtNome = new TextBox();
-            mtxtCPF = new MaskedTextBox();
-            mtxtNascimento = new MaskedTextBox();
-            mtxtTelCelular = new MaskedTextBox();
-            mtxtTelResidencia = new MaskedTextBox();
+            txtCPF = new MaskedTextBox();
+            txtTelCelular = new MaskedTextBox();
+            txtTelResidencia = new MaskedTextBox();
             txtEmail = new TextBox();
-            mtxtCEP = new MaskedTextBox();
-            btnPesquisar = new Button();
+            txtCEP = new MaskedTextBox();
             txtRua = new TextBox();
             txtBairro = new TextBox();
-            txtNumeroCasa = new TextBox();
+            txtNumero = new TextBox();
             txtComplemento = new TextBox();
-            txtEstadoSigla = new TextBox();
             txtCidade = new TextBox();
             cbTurno = new ComboBox();
             label6 = new Label();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            cbEstado = new ComboBox();
+            dtpDataNascimento = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbProfessor).BeginInit();
             SuspendLayout();
@@ -116,6 +115,7 @@
             btnCadastro.TabIndex = 34;
             btnCadastro.TabStop = false;
             btnCadastro.UseVisualStyleBackColor = false;
+            btnCadastro.Click += btnCadastro_Click;
             // 
             // btnCancelar
             // 
@@ -167,43 +167,32 @@
             txtNome.Size = new Size(255, 26);
             txtNome.TabIndex = 42;
             // 
-            // mtxtCPF
+            // txtCPF
             // 
-            mtxtCPF.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtCPF.Location = new Point(44, 189);
-            mtxtCPF.Mask = "000.000.000-00";
-            mtxtCPF.Name = "mtxtCPF";
-            mtxtCPF.Size = new Size(139, 29);
-            mtxtCPF.TabIndex = 43;
+            txtCPF.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCPF.Location = new Point(44, 189);
+            txtCPF.Mask = "000.000.000-00";
+            txtCPF.Name = "txtCPF";
+            txtCPF.Size = new Size(139, 29);
+            txtCPF.TabIndex = 43;
             // 
-            // mtxtNascimento
+            // txtTelCelular
             // 
-            mtxtNascimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtNascimento.ForeColor = SystemColors.WindowText;
-            mtxtNascimento.Location = new Point(45, 248);
-            mtxtNascimento.Mask = "00/00/0000";
-            mtxtNascimento.Name = "mtxtNascimento";
-            mtxtNascimento.Size = new Size(138, 29);
-            mtxtNascimento.TabIndex = 44;
-            mtxtNascimento.ValidatingType = typeof(DateTime);
+            txtTelCelular.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelCelular.Location = new Point(60, 361);
+            txtTelCelular.Mask = "(00) 00000-0000";
+            txtTelCelular.Name = "txtTelCelular";
+            txtTelCelular.Size = new Size(145, 29);
+            txtTelCelular.TabIndex = 45;
             // 
-            // mtxtTelCelular
+            // txtTelResidencia
             // 
-            mtxtTelCelular.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtTelCelular.Location = new Point(60, 361);
-            mtxtTelCelular.Mask = "(00) 00000-0000";
-            mtxtTelCelular.Name = "mtxtTelCelular";
-            mtxtTelCelular.Size = new Size(145, 29);
-            mtxtTelCelular.TabIndex = 45;
-            // 
-            // mtxtTelResidencia
-            // 
-            mtxtTelResidencia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtTelResidencia.Location = new Point(60, 414);
-            mtxtTelResidencia.Mask = "(00) 00000-0000";
-            mtxtTelResidencia.Name = "mtxtTelResidencia";
-            mtxtTelResidencia.Size = new Size(145, 29);
-            mtxtTelResidencia.TabIndex = 46;
+            txtTelResidencia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelResidencia.Location = new Point(60, 414);
+            txtTelResidencia.Mask = "(00) 00000-0000";
+            txtTelResidencia.Name = "txtTelResidencia";
+            txtTelResidencia.Size = new Size(145, 29);
+            txtTelResidencia.TabIndex = 46;
             // 
             // txtEmail
             // 
@@ -215,29 +204,14 @@
             txtEmail.Size = new Size(193, 27);
             txtEmail.TabIndex = 47;
             // 
-            // mtxtCEP
+            // txtCEP
             // 
-            mtxtCEP.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtCEP.Location = new Point(373, 101);
-            mtxtCEP.Mask = "00000-00";
-            mtxtCEP.Name = "mtxtCEP";
-            mtxtCEP.Size = new Size(108, 29);
-            mtxtCEP.TabIndex = 48;
-            // 
-            // btnPesquisar
-            // 
-            btnPesquisar.BackColor = Color.Transparent;
-            btnPesquisar.FlatAppearance.BorderSize = 0;
-            btnPesquisar.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnPesquisar.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnPesquisar.FlatStyle = FlatStyle.Flat;
-            btnPesquisar.ForeColor = Color.Transparent;
-            btnPesquisar.Location = new Point(479, 100);
-            btnPesquisar.Name = "btnPesquisar";
-            btnPesquisar.Size = new Size(33, 32);
-            btnPesquisar.TabIndex = 49;
-            btnPesquisar.TabStop = false;
-            btnPesquisar.UseVisualStyleBackColor = false;
+            txtCEP.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCEP.Location = new Point(373, 101);
+            txtCEP.Mask = "00000-000";
+            txtCEP.Name = "txtCEP";
+            txtCEP.Size = new Size(109, 29);
+            txtCEP.TabIndex = 48;
             // 
             // txtRua
             // 
@@ -259,15 +233,15 @@
             txtBairro.Size = new Size(136, 29);
             txtBairro.TabIndex = 51;
             // 
-            // txtNumeroCasa
+            // txtNumero
             // 
-            txtNumeroCasa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNumeroCasa.ForeColor = Color.Black;
-            txtNumeroCasa.Location = new Point(336, 222);
-            txtNumeroCasa.Multiline = true;
-            txtNumeroCasa.Name = "txtNumeroCasa";
-            txtNumeroCasa.Size = new Size(63, 31);
-            txtNumeroCasa.TabIndex = 52;
+            txtNumero.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumero.ForeColor = Color.Black;
+            txtNumero.Location = new Point(336, 222);
+            txtNumero.Multiline = true;
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(63, 31);
+            txtNumero.TabIndex = 52;
             // 
             // txtComplemento
             // 
@@ -278,16 +252,6 @@
             txtComplemento.Name = "txtComplemento";
             txtComplemento.Size = new Size(133, 28);
             txtComplemento.TabIndex = 53;
-            // 
-            // txtEstadoSigla
-            // 
-            txtEstadoSigla.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEstadoSigla.ForeColor = Color.Black;
-            txtEstadoSigla.Location = new Point(486, 280);
-            txtEstadoSigla.Multiline = true;
-            txtEstadoSigla.Name = "txtEstadoSigla";
-            txtEstadoSigla.Size = new Size(129, 28);
-            txtEstadoSigla.TabIndex = 54;
             // 
             // txtCidade
             // 
@@ -358,30 +322,47 @@
             label3.TabIndex = 60;
             label3.Text = "*";
             // 
+            // cbEstado
+            // 
+            cbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEstado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbEstado.FormattingEnabled = true;
+            cbEstado.Location = new Point(487, 280);
+            cbEstado.Name = "cbEstado";
+            cbEstado.Size = new Size(127, 29);
+            cbEstado.TabIndex = 61;
+            // 
+            // dtpDataNascimento
+            // 
+            dtpDataNascimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDataNascimento.Location = new Point(44, 246);
+            dtpDataNascimento.Name = "dtpDataNascimento";
+            dtpDataNascimento.Size = new Size(200, 29);
+            dtpDataNascimento.TabIndex = 62;
+            // 
             // TelaProfessor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(960, 540);
+            Controls.Add(dtpDataNascimento);
+            Controls.Add(cbEstado);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label6);
             Controls.Add(cbTurno);
             Controls.Add(txtCidade);
-            Controls.Add(txtEstadoSigla);
             Controls.Add(txtComplemento);
-            Controls.Add(txtNumeroCasa);
+            Controls.Add(txtNumero);
             Controls.Add(txtBairro);
             Controls.Add(txtRua);
-            Controls.Add(btnPesquisar);
-            Controls.Add(mtxtCEP);
+            Controls.Add(txtCEP);
             Controls.Add(txtEmail);
-            Controls.Add(mtxtTelResidencia);
-            Controls.Add(mtxtTelCelular);
-            Controls.Add(mtxtNascimento);
-            Controls.Add(mtxtCPF);
+            Controls.Add(txtTelResidencia);
+            Controls.Add(txtTelCelular);
+            Controls.Add(txtCPF);
             Controls.Add(txtNome);
             Controls.Add(pbProfessor);
             Controls.Add(btnLimpar);
@@ -409,23 +390,22 @@
         private Button btnLimpar;
         private PictureBox pbProfessor;
         private TextBox txtNome;
-        private MaskedTextBox mtxtCPF;
-        private MaskedTextBox mtxtNascimento;
-        private MaskedTextBox mtxtTelCelular;
-        private MaskedTextBox mtxtTelResidencia;
+        private MaskedTextBox txtCPF;
+        private MaskedTextBox txtTelCelular;
+        private MaskedTextBox txtTelResidencia;
         private TextBox txtEmail;
-        private MaskedTextBox mtxtCEP;
-        private Button btnPesquisar;
+        private MaskedTextBox txtCEP;
         private TextBox txtRua;
         private TextBox txtBairro;
-        private TextBox txtNumeroCasa;
+        private TextBox txtNumero;
         private TextBox txtComplemento;
-        private TextBox txtEstadoSigla;
         private TextBox txtCidade;
         private ComboBox cbTurno;
         private Label label6;
         private Label label1;
         private Label label2;
         private Label label3;
+        private ComboBox cbEstado;
+        private DateTimePicker dtpDataNascimento;
     }
 }
